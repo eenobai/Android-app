@@ -30,6 +30,6 @@ public class Main{
 		QuestionFetcher.fetchQuestion();
 		//QuestionFetcher.fetchAnswers();
 		QuestionFetcher.nextQuestion();
-	}
-	
+		
+	}	
 }

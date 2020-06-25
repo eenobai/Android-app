@@ -4,7 +4,7 @@ public class QuestionFetcher extends Main{
 
 	static int i = 0;
 	static int j = 0;
-	static int counter = 0;
+	//static int counter = 0;
 	
 	public static void fetchQuestion() {
 		
@@ -24,14 +24,23 @@ public class QuestionFetcher extends Main{
 	}
 	
 	public static void nextQuestion() {
-		while(counter < questionText.size()) {
-		Scanner sc = new Scanner(System.in);
-		playerAnswers.add(sc.nextInt());
-		if(counter < questionText.size() && sc.hasNextInt()) {
-			counter += 1;
-			fetchQuestion();
+		if(playerAnswers.size() <= questionText.size()) {
+			for(int counter = 0; counter <= questionText.size(); counter++) {
+				Scanner sc = new Scanner(System.in);
+				playerAnswers.add(sc.nextInt());
+				if(counter < questionText.size() && sc.hasNextInt()) {			
+					fetchQuestion();
+				}
+			} 
+		}else {System.out.println("Did it crash?");
+			System.out.println(playerAnswers);
+			}
 		}
-		System.out.println(playerAnswers);
 	}
-	}
-}
+	
+	/*public static void gameEnd() {
+		if(playerAnswers == correctAnswer) {
+			System.out.println("you won");
+	}*/
+		
+
