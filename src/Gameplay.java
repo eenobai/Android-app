@@ -1,11 +1,10 @@
+import java.util.Scanner;
 
-public class Gameplay extends Main{
+public class Gameplay extends QuestionFetcher{
 	
-	public int gameplay() {
-		
-		
-		return playerAnswer;
-	}
+	
+	
+	
 	
 	
 }
