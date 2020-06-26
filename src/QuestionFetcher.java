@@ -24,19 +24,21 @@ public class QuestionFetcher extends Main{
 	}
 	
 	public static void nextQuestion() {
-		if(playerAnswers.size() <= questionText.size()) {
+		try{if(playerAnswers.size() < questionText.size()) {
 			for(int counter = 0; counter <= questionText.size(); counter++) {
 				Scanner sc = new Scanner(System.in);
 				playerAnswers.add(sc.nextInt());
 				if(counter < questionText.size() && sc.hasNextInt()) {			
 					fetchQuestion();
 				}
-			} 
-		}else {System.out.println("Did it crash?");
-			System.out.println(playerAnswers);
 			}
 		}
+		}
+		catch (Exception e) {
+			System.out.println("DId it crash?");
+		}
 	}
+}
 	
 	/*public static void gameEnd() {
 		if(playerAnswers == correctAnswer) {
