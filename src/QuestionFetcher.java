@@ -24,18 +24,20 @@ public class QuestionFetcher extends Main{
 	}
 	
 	public static void nextQuestion() {
-		try{if(playerAnswers.size() < questionText.size()) {
-			for(int counter = 0; counter <= questionText.size(); counter++) {
+		try{
+			for(int counter = 0; counter < questionText.size(); counter++) {
 				Scanner sc = new Scanner(System.in);
 				playerAnswers.add(sc.nextInt());
-				if(counter < questionText.size() && sc.hasNextInt()) {			
+				if(counter < questionText.size()) {			
 					fetchQuestion();
+				}else {
+					finishGame();
 				}
 			}
 		}
-		}
 		catch (Exception e) {
 			System.out.println("DId it crash?");
+			
 		}
 	}
 }

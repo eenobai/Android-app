@@ -30,6 +30,12 @@ public class Main{
     		System.exit(0); 
     	}else {System.out.println("Invalid input /from menu");
     	}	
+    		
+    	EndGame.finalScore();
+    }
+    
+    public static void finishGame() {
+    	EndGame.finalScore();
     }
 	
 	@SuppressWarnings("resource")
