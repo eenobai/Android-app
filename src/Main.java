@@ -10,13 +10,13 @@ public class Main{
     static ArrayList<Integer> correctAnswer = new ArrayList();
     static ArrayList<Integer> playerAnswers = new ArrayList();
     static ArrayList<String> bug = new ArrayList();
-
     
     public Main() {
     }
-    
+
+
     static int i = 0;
-    
+
     public static void menu(int j) throws FileNotFoundException {
     	i = j;
 
