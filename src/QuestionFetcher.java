@@ -34,11 +34,16 @@ public class QuestionFetcher extends Main{
 					finishGame();
 					System.out.println(playerAnswers);
 					playerAnswers.clear();
-					i = 0;
+					/*questionText.clear();
+					answers.clear();
+					imageId.clear();
+					correctAnswer.clear();
+					bug.clear();*/
+					s = 0;
 					j = 0;
 					System.out.println(playerAnswers);
-					sc.nextInt();
-					menu(i);
+					System.out.println("1 if you want to continue");
+					menu(sc.nextInt());
 				}
 			}
 

@@ -22,7 +22,6 @@ public class Main{
 
 			if (i == 1) {
 				System.out.println("Game has been started");
-				Parser.parser();
 				QuestionFetcher.fetchQuestion();
 				QuestionFetcher.nextQuestion();
 			}
@@ -49,6 +48,7 @@ public class Main{
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws FileNotFoundException {
 		System.out.println("1-start game, 2 -exit game;");
+		Parser.parser();
 		Scanner sc = new Scanner(System.in);
 		i = sc.nextInt();
 		menu(i);
