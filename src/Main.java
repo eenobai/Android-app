@@ -13,42 +13,45 @@ public class Main{
 
     
     public Main() {
-    	
     }
     
     static int i = 0;
     
-    public void menu(int j) {
+    public static void menu(int j) throws FileNotFoundException {
     	i = j;
-    	if(i == 1) {
-    		System.out.println("Game has been started");
-    		
-    		QuestionFetcher.fetchQuestion();
-    		QuestionFetcher.nextQuestion();	
-    		}if(i == 2) {
-    		System.out.println("Exiting the game");
-    		System.exit(0); 
-    	}else {System.out.println("Invalid input /from menu");
-    	}	
-    		
+
+			if (i == 1) {
+				System.out.println("Game has been started");
+				Parser.parser();
+				QuestionFetcher.fetchQuestion();
+				QuestionFetcher.nextQuestion();
+			}
+			if (i == 2) {
+				System.out.println("Exiting the game");
+				System.exit(69);
+			} else {
+				System.out.println("Invalid input /from menu");
+			}
+
     	EndGame.finalScore();
     }
     
     public static void finishGame() {
     	EndGame.finalScore();
     }
+
+    /*public static void execute(){
+		while(i != 9){
+			menu(i);
+		}
+	}*/
 	
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws FileNotFoundException {
 		System.out.println("1-start game, 2 -exit game;");
-		Scanner sc = new Scanner(System.in);		
+		Scanner sc = new Scanner(System.in);
 		i = sc.nextInt();
-		
-		
-		Parser tester = new Parser();
-		tester.parser();
-		tester.menu(i);	
-
+		menu(i);
 	}
 
 }	

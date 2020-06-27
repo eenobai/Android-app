@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 //parses questions and answers from a txt file
 public class Parser extends Main{
 
-	public void parser() throws FileNotFoundException {
+	public static void parser() throws FileNotFoundException {
 		File file = new File("C:\\Users\\Pepega\\Desktop\\myTxt\\SampleQuestions.txt");
 		Scanner txtIn = new Scanner(file);
 		
