@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 public class Parser extends Main{
 
 	public static void parser() throws FileNotFoundException {
-		File file = new File("C:\\Users\\Pepega\\Desktop\\myTxt\\SampleQuestions.txt");
+		File file = new File("resources\\SampleQuestions.txt");
 		Scanner txtIn = new Scanner(file);
 		
 		/*System.out.println(txtIn.nextInt()); //1
